@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Health Symptom Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Health Symptom Checker</h1>
+
+    <!-- Diabetes -->
+    <div class="question"><label><input type="checkbox" id="thirst"> Frequent thirst</label></div>
+    <div class="question"><label><input type="checkbox" id="urination"> Frequent urination</label></div>
+    <div class="question"><label><input type="checkbox" id="fatigue"> Fatigue</label></div>
+    <div class="question"><label><input type="checkbox" id="blurred"> Blurred vision</label></div>
+    
+    <!-- Blood Pressure -->
+    <div class="question"><label><input type="checkbox" id="dizzy"> Dizziness</label></div>
+    <div class="question"><label><input type="checkbox" id="headache"> Frequent headaches</label></div>
+    <div class="question"><label><input type="checkbox" id="chestPain"> Chest pain</label></div>
+
+    <!-- Cold/Flu -->
+    <div class="question"><label><input type="checkbox" id="cough"> Persistent cough</label></div>
+    <div class="question"><label><input type="checkbox" id="fever"> Fever</label></div>
+    <div class="question"><label><input type="checkbox" id="soreThroat"> Sore throat</label></div>
+
+    <button onclick="checkIllness()">Check</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
