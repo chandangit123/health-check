@@ -10,27 +10,49 @@
   <div class="container">
     <h1>Health Symptom Checker</h1>
 
-    <!-- Diabetes -->
-    <div class="question"><label><input type="checkbox" id="thirst"> Frequent thirst</label></div>
-    <div class="question"><label><input type="checkbox" id="urination"> Frequent urination</label></div>
-    <div class="question"><label><input type="checkbox" id="fatigue"> Fatigue</label></div>
-    <div class="question"><label><input type="checkbox" id="blurred"> Blurred vision</label></div>
-    
-    <!-- Blood Pressure -->
-    <div class="question"><label><input type="checkbox" id="dizzy"> Dizziness</label></div>
-    <div class="question"><label><input type="checkbox" id="headache"> Frequent headaches</label></div>
-    <div class="question"><label><input type="checkbox" id="chestPain"> Chest pain</label></div>
+    <!-- Progress bar -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-    <!-- Cold/Flu -->
-    <div class="question"><label><input type="checkbox" id="cough"> Persistent cough</label></div>
-    <div class="question"><label><input type="checkbox" id="fever"> Fever</label></div>
-    <div class="question"><label><input type="checkbox" id="soreThroat"> Sore throat</label></div>
+    <!-- Step 1: Diabetes Symptoms -->
+    <div class="step" id="step1">
+      <div class="question"><label><input type="checkbox" id="thirst"> Frequent thirst</label></div>
+      <div class="question"><label><input type="checkbox" id="urination"> Frequent urination</label></div>
+      <div class="question"><label><input type="checkbox" id="fatigue"> Fatigue</label></div>
+      <div class="question"><label><input type="checkbox" id="blurred"> Blurred vision</label></div>
+      <div class="buttons">
+        <button onclick="nextStep()">Next</button>
+      </div>
+    </div>
 
-    <button onclick="checkIllness()">Check</button>
+    <!-- Step 2: Blood Pressure Symptoms -->
+    <div class="step" id="step2">
+      <div class="question"><label><input type="checkbox" id="dizzy"> Dizziness</label></div>
+      <div class="question"><label><input type="checkbox" id="headache"> Frequent headaches</label></div>
+      <div class="question"><label><input type="checkbox" id="chestPain"> Chest pain</label></div>
+      <div class="buttons">
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+    </div>
 
-    <div id="result" class="result"></div>
+    <!-- Step 3: Cold/Flu Symptoms -->
+    <div class="step" id="step3">
+      <div class="question"><label><input type="checkbox" id="cough"> Persistent cough</label></div>
+      <div class="question"><label><input type="checkbox" id="fever"> Fever</label></div>
+      <div class="question"><label><input type="checkbox" id="soreThroat"> Sore throat</label></div>
+      <div class="buttons">
+        <button onclick="prevStep()">Back</button>
+        <button onclick="checkIllness()">Submit</button>
+      </div>
+    </div>
+
+    <!-- Final Result -->
+    <div class="result" id="result"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
